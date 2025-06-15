@@ -13,3 +13,7 @@ h1 {
     padding: 10px;
     border-radius: 5px;
 }
+
+.list-container {
+	max-height: 300px !important;
+}

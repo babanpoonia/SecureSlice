@@ -1,14 +1,53 @@
+<!-- templates/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>SecureSlice Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecureSlice Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body>
-    <h1>SecureSlice Dashboard</h1>
-    <div id="threats"></div>
+<body class="bg-light min-vh-100">
+  <div class="container-fluid py-2 h-100">
+    <h1 class="mb-4">SecureSlice 5G Dashboard</h1>
 
-    <script src="script.js"></script>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="card-body h-100">
+            <h5 class="card-title">Connected UEs</h5>
+            <div class="list-container overflow-auto">
+            	<ul id="ue-list" class="list-group"></ul>
+           	</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Threat Scores</h5>
+            <canvas id="threatChart" height="150px"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+	<div class="row mt-4">
+		<div class="col-12">
+		    <div class="card h-100">
+		      <div class="card-body">
+		        <h5 class="card-title">Recent Threat Logs</h5>
+		        <div class="list-container overflow-auto">
+		        	<ul id="log-list" class="list-group"></ul>
+		        </div>
+		      </div>
+		    </div>
+		</div>
+	</div>
+  </div>
+
+  <script src="./script.js"></script>
 </body>
 </html>
