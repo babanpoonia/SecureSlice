@@ -13,7 +13,7 @@ async function fetchData() {
   logList.innerHTML = '';
   const reversedLogs = [...logs].reverse();
   reversedLogs.forEach(log => {
-    logList.innerHTML += `<li class="list-group-item">${log.time} - ${log.message}</li>`;
+    logList.innerHTML += `<li class="list-group-item">${log.time} - ${log.label}</li>`;
   });
 
   const chartLabels = logs.map(l => l.time);

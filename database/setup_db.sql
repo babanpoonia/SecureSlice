@@ -9,3 +9,5 @@ CREATE TABLE IF NOT EXISTS packet_logs (
     protocol VARCHAR(20),
     length INTEGER
 );
+
+ALTER TABLE packet_logs ADD COLUMN attack_label VARCHAR(50);

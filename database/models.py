@@ -16,3 +16,4 @@ class PacketLog(Base):
     dest_ip = Column(String)
     protocol = Column(String)
     length = Column(Integer)
+    attack_label = Column(String)
